@@ -11,16 +11,17 @@ html {
 }
 
 body {
-    background: #595b8398;
     font-family: "Roboto", sans-serif;
-    background: #000;
+    background: #595b83;
 }
 
 .container {
     max-width: 90%;
     margin: 0 auto;
     height: 100vh;
-    background: #eee;
+    background: rgb(143, 121, 121);
+    border-radius: 20px;
+    background: #7a7daa;
 }
 
 .row {
@@ -66,6 +67,7 @@ form {
     flex-flow: wrap;
     justify-content: center;
     align-items: center;
+    box-shadow: 10px 10px 20px #39383a;
 }
 
 .logo {
