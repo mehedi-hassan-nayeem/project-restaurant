@@ -11,29 +11,20 @@ html {
 }
 
 body {
-    position: relative;
     background: #595b8398;
     font-family: "Roboto", sans-serif;
+    background: #000;
 }
 
 .container {
     max-width: 90%;
-    margin: auto;
+    margin: 0 auto;
     height: 100vh;
-    display: flex;
-    justify-self: center;
-    align-items: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%);
+    background: #eee;
 }
 
 .row {
     width: 100%;
-    display: flex;
-    justify-self: center;
-    align-items: center;
 }
 
 .row::after {
@@ -57,52 +48,64 @@ body {
 /*  */
 
 /* form-section */
+
+form {
+    text-align: center;
+    padding: 15px;
+    border-radius: 15px;
+    width: 270px;
+    height: 395px;
+    margin: 100px auto;
+    background-image: url("../images/login.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
 .logo {
-    width: 85px;
-    height: 85px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
+    box-sizing: border-box;
 }
 
 .logo:hover {
     box-shadow: 0px 0px 10px 2px #fff;
 }
 
-form {
-    text-align: center;
-    padding: 5%;
-    background-image: url("../images/login.jpg");
-    border-radius: 10px;
-    max-width: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-form > div {
-    max-width: 90%;
-}
-
-.form-login {
-    margin: 10%;
-}
-
 input {
-    margin: 5%;
+    box-sizing: border-box;
+    margin: 10px;
     padding: 15px 0;
-    width: 85%;
+    width: 220px;
     border: none;
     outline: none;
     background: transparent;
     color: black;
-    text-indent: 5%;
+    text-indent: 10px;
     box-shadow: inset 0px 0px 30px 10px #fff;
-    font-weight: bolder;
+    font-weight: 600;
     border-radius: 10px;
 }
 
+input:focus {
+    box-shadow: inset 0px 0px 30px 20px #fff;
+}
+
+input::placeholder {
+    text-indent: 10px;
+    color: black;
+    font-size: medium;
+}
+
 button {
-    padding: 7% 12%;
+    padding: 10px 15px;
     border: none;
     outline: none;
     border-radius: 10px;
@@ -114,10 +117,9 @@ button {
     margin: 15px 0 0 0;
 }
 
-input::placeholder {
-    color: royalblue;
-    text-indent: 5%;
-    color: rgb(0, 0, 0);
+button:hover {
+    box-shadow: inset 0px 0px 20px 10px rgb(109, 124, 209);
+    color: white;
 }
 
 /*  */
@@ -129,6 +131,22 @@ input::placeholder {
 /* media-queries */
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 576px) {
+    /* form-section */
+    form {
+        width: 300px;
+        height: 390px;
+        margin: 100px auto;
+    }
+
+    input {
+        width: 250px;
+    }
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+    /*  */
+
     .col-sm-1 {
         width: 8.33%;
     }
@@ -171,16 +189,20 @@ input::placeholder {
 @media only screen and (min-width: 768px) {
     /* form-section */
     form {
-        height: 475px;
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-        align-items: center;
+        width: 350px;
+        height: 450px;
+        margin: 70px auto;
+    }
+
+    input {
+        width: 280px;
     }
     /*  */
     /*  */
     /*  */
     /*  */
+    /*  */
+
     .col-md-1 {
         width: 8.33%;
     }
@@ -223,12 +245,15 @@ input::placeholder {
 @media only screen and (min-width: 992px) {
     /* form-section */
     form {
-        height: 575px;
-        display: flex;
-        flex-flow: column;
-        justify-content: center;
-        align-items: center;
+        width: 400px;
+        height: 495px;
+        margin: 50px auto;
     }
+
+    input {
+        width: 320px;
+    }
+    /*  */
     /*  */
     /*  */
     /*  */
