@@ -94,7 +94,8 @@ img:hover {
 .form-container input[type="email"],
 [type="password"],
 [type="text"],
-[type="tel"] {
+[type="tel"],
+[type="number"] {
     margin: 10px;
     padding: 7px;
     border: none;
